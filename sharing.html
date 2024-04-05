@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Drawing</title>
+</head>
+<body>
+    <!-- Dummy drawing image -->
+    <img src="https://via.placeholder.com/300" alt="Drawing" id="drawingImage">
+    
+    <!-- Share button for Twitter -->
+    <button onclick="shareOnTwitter()">Share on Twitter</button>
+
+    <!-- Include Twitter JavaScript SDK -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <script>
+        // Replace with your drawing image URL
+        const drawingImageUrl = 'https://via.placeholder.com/300';
+
+        // Function to share on Twitter
+        function shareOnTwitter() {
+            // Open Twitter share dialog
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(drawingImageUrl)}&text=Check out my drawing!`, '_blank', 'width=600,height=300');
+        }
+    </script>
+</body>
+</html>
